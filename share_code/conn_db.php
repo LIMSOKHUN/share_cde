@@ -9,5 +9,4 @@ $conn = new mysqli($host_name,$user_name,$password,$db_name);
 if(!$conn){
     die("Error Connect");
 }
-
 ?>

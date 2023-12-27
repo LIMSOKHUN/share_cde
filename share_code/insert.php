@@ -1,3 +1,28 @@
+<?php
+    include('conn_db.php');
+
+    if(isset($_POST['submit'])){
+        $name = $_POST['name'];
+        $english = $_POST['english'];
+        $email = $_POST['email'];
+        $sex = $_POST['sex'];
+        $birthday = $_POST['birthday'];
+        $address = $_POST['address'];
+        $position = $_POST['position'];
+        $phone = $_POST['phone'];
+
+        $query_insert = "INSERT INTO imployee (name,english,email,sex,birthday,address,position,phone)
+        VALUES ('$name','$english','$email','$sex','$birthday','$address','$position','$phone')";
+
+        if($conn->query($query_insert)==true){
+         echo "<script>
+         alert('Insert SuccessFull');
+         document.location.href='index.php';
+         </script>";
+        }
+        
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 
